@@ -86,8 +86,8 @@ export const cmdCreateOrUpdateWalletsTable = async () => {
         },
       ]
       await createWalletsXlsx(defaultWallets)
-      logger.success('Wallets table has been created')
     }
+    logger.success('Wallets table has been created')
   } catch (err) {
     logger.error('', err)
   }
