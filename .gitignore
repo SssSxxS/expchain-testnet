@@ -1,0 +1,5 @@
+node_modules/
+bun.lock
+
+data/logs/
+data/wallets.xlsx
