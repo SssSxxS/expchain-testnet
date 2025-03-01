@@ -1,6 +1,6 @@
-# EXHchain-Testnet
+# EXPchain-Testnet
 
-A command-line interface tool for interacting with the EXHchain Testnet blockchain
+A command-line interface tool for interacting with the EXPchain Testnet blockchain
 
 [![Telegram](https://img.shields.io/badge/Telegram-26A5E4?logo=telegram&logoColor=fff&style=flat-square)](https://t.me/yofomo)
 
