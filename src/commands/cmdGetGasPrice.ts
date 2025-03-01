@@ -9,9 +9,9 @@ export const cmdGetGasPrice = async () => {
     const gasPriceBsc = await getGasPrice(CHAINS.BSC.rpcUrl)
 
     logger.success('Gas Price:')
-    logger.success(`  • EXPchain: ${gasPriceExpchain} gwei`)
-    logger.success(`  • Sepolia:  ${gasPriceSepolia} gwei`)
-    logger.success(`  • BSC:      ${gasPriceBsc} gwei`)
+    logger.success(`    EXPchain: ${gasPriceExpchain} gwei`)
+    logger.success(`    Sepolia:  ${gasPriceSepolia} gwei`)
+    logger.success(`    BSC:      ${gasPriceBsc} gwei`)
   } catch (err) {
     logger.error('', err)
   }
