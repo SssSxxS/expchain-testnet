@@ -52,5 +52,7 @@ bun install && bun .\index.ts
 4. Update the wallets information by selecting "Create or Update Wallets Table"
 5. Toggle wallets "ON"/"OFF" as needed
 6. Edit the `config.ts` file in the `data` folder as needed
+
    ![Config](https://i.postimg.cc/yNnm4qx8/Screenshot-2025-03-01-161934.png)
+
 7. Use other menu options
