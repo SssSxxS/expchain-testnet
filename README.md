@@ -2,7 +2,7 @@
 
 A command-line interface tool for interacting with the [EXPchain Testnet](https://expchain.ai/) blockchain
 
-[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?logo=telegram&logoColor=fff&style=flat-square)](https://t.me/yofomo)
+[![Telegram](https://img.shields.io/badge/Telegram-26A5E4?logo=telegram&logoColor=fff&style=flat-square)](https://t.me/yofomo) [![YouTube](https://img.shields.io/badge/YouTube-F00?logo=youtube&logoColor=fff&style=flat-square)](https://www.youtube.com/watch?v=fn644Zd_Is0)
 
 ![Interface](https://i.postimg.cc/8zM4YnL7/Screenshot-2025-03-01-161728.png)
 
