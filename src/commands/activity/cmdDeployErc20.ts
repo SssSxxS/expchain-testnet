@@ -9,7 +9,9 @@ export const cmdDeployErc20 = async () => {
     for (const wallet of wallets) {
       try {
         const erc20Contract = await deployErc20(CHAINS.EXPchain.rpcUrl, wallet.privateKey)
-        logger.info(`(${wallet.id}) Deployed ERC-20 contract: ${CHAINS.EXPchain.explorerUrl}/tx/${erc20Contract?.hash}`)
+        logger.success(
+          `(${wallet.id}) Deployed ERC-20 contract: ${CHAINS.EXPchain.explorerUrl}/tx/${erc20Contract?.hash}`
+        )
       } catch (err) {
         logger.error(`(${wallet.id})`, err)
       }

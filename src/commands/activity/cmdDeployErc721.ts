@@ -9,7 +9,7 @@ export const cmdDeployErc721 = async () => {
     for (const wallet of wallets) {
       try {
         const erc721Contract = await deployErc721(CHAINS.EXPchain.rpcUrl, wallet.privateKey)
-        logger.info(
+        logger.success(
           `(${wallet.id}) Deployed ERC-721 contract: ${CHAINS.EXPchain.explorerUrl}/tx/${erc721Contract?.hash}`
         )
       } catch (err) {
