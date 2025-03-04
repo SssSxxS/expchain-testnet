@@ -17,6 +17,10 @@ export const BRIDGE_SLEEP_RANGE_BETWEEN_WALLETS = [100, 300] // [min, max] in se
 /* --------------------------------- Deploy --------------------------------- */
 export const DEPLOY_SLEEP_RANGE = [100, 300] // [min, max] in seconds
 
+/* -------------------------- Swap $tZKJ to $wtZKJ -------------------------- */
+export const SWAP_AMOUNT = [0.001, 0.009] // [min, max] in $tZKJ
+export const SWAP_SLEEP_RANGE = [100, 300] // [min, max] in seconds
+
 /* ---------------------------------- Const --------------------------------- */
 // If you don't know what you are doing, don't change this
 export const EXPCHAIN_TESTNET_RPC_URL = 'https://rpc0-testnet.expchain.ai' // https://rpc0-testnet.expchain.ai / https://rpc1-testnet.expchain.ai

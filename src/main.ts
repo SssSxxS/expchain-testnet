@@ -10,6 +10,7 @@ import {
   cmdOffZeroBalance,
   cmdOnAll,
   cmdOnZeroBalance,
+  cmdSwapTzkjToWtzkj,
 } from '@/commands'
 import { logger } from '@/lib/logger'
 import { select, Separator } from '@inquirer/prompts'
@@ -64,6 +65,10 @@ const menuCommands: MenuCommand[] = [
   {
     name: 'Deploy ERC-721 Contract',
     action: async () => await cmdDeployErc721(),
+  },
+  {
+    name: 'Swap $tZKJ to $wtZKJ | https://curve.fi/dex/#/expchain/swap',
+    action: async () => await cmdSwapTzkjToWtzkj(),
     addSeparator: true,
   },
   {

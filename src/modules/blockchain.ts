@@ -124,3 +124,52 @@ export const deployErc721 = async (rpcUrl: string, privateKey: string) => {
 
   return receipt
 }
+
+export const exchangeCurve = async (
+  rpcUrl: string,
+  privateKey: string,
+  routerAddress: string,
+  route: string[],
+  swapParams: string[][],
+  amount: string
+) => {
+  const curveAbi = [
+    'function exchange(address[11] _route, uint256[4][5] _swap_params, uint256 _amount, uint256 _min_dy) payable returns (uint256)',
+  ]
+
+  const provider = new ethers.JsonRpcProvider(rpcUrl)
+  const wallet = new ethers.Wallet(privateKey, provider)
+  const routerContract = new ethers.Contract(routerAddress, curveAbi, wallet)
+
+  route = [
+    '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+    '0xB671A1B90CD11Fb9554F6BA8bad1cc13129E3BB2',
+    '0xB671A1B90CD11Fb9554F6BA8bad1cc13129E3BB2',
+    '0x0000000000000000000000000000000000000000',
+    '0x0000000000000000000000000000000000000000',
+    '0x0000000000000000000000000000000000000000',
+    '0x0000000000000000000000000000000000000000',
+    '0x0000000000000000000000000000000000000000',
+    '0x0000000000000000000000000000000000000000',
+    '0x0000000000000000000000000000000000000000',
+    '0x0000000000000000000000000000000000000000',
+  ]
+  swapParams = [
+    ['0', '0', '8', '0'],
+    ['0', '0', '0', '0'],
+    ['0', '0', '0', '0'],
+    ['0', '0', '0', '0'],
+    ['0', '0', '0', '0'],
+  ]
+
+  const minDy = String(parseFloat(amount) - parseFloat(amount) * 0.1)
+  const amountBigInt = ethers.parseEther(amount)
+  const minDyBigInt = ethers.parseEther(minDy)
+
+  const tx = await routerContract.exchange(route, swapParams, amountBigInt, minDyBigInt, {
+    value: amountBigInt,
+  })
+  const receipt = await tx.wait()
+
+  return receipt
+}
