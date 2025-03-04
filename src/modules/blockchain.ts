@@ -162,9 +162,8 @@ export const exchangeCurve = async (
     ['0', '0', '0', '0'],
   ]
 
-  const minDy = String(parseFloat(amount) - parseFloat(amount) * 0.1)
   const amountBigInt = ethers.parseEther(amount)
-  const minDyBigInt = ethers.parseEther(minDy)
+  const minDyBigInt = (amountBigInt * BigInt(90)) / BigInt(100)
 
   const tx = await routerContract.exchange(route, swapParams, amountBigInt, minDyBigInt, {
     value: amountBigInt,
