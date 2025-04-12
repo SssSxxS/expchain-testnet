@@ -70,6 +70,7 @@ const menuCommands: MenuCommand[] = [
     name: 'Swap $tZKJ to $wtZKJ | https://curve.fi/dex/#/expchain/swap',
     action: async () => await cmdSwapTzkjToWtzkj(),
     addSeparator: true,
+    disabled: true,
   },
   {
     name: 'Exit',
